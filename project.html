@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHO MAY HAI PHONG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--header đầu trang-->
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="logo">
+            <h2 class="ten">KHO MÁY HẢI PHÒNG</h2>
+        </div>
+
+        
+    </header>
+
+    <!--thanh tìm kiếm-->
+    <div class="name">
+        <h1>Sản Phẩm Kho Máy</h1>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Tìm sản phẩm...">
+            <button>Tìm</button>
+        </div>
+
+        <p id="noResult">
+            Không tìm thấy kết quả
+        </p>
+    </div>
+
+    <!--Bảng sản phẩm-->
+    <div class="grid-container">
+
+
+
+        <div class="item">
+            <img src="images/anhmay.png"
+            class="product-img"
+            data-images="images/1.jpg,images/2.jpg,images/3.jpg,images/4.jpg,images/5.jpg">
+            <h3>Máy khắc CNC</h3>
+            <button class="xemthongtin"
+                data-ten="Máy Khắc CNC"
+                data-congxuat="10kw"
+                data-xuatxu="VN"
+                data-baohanh="10 năm">
+                Xem Thông Tin
+            </button>
+        </div>
+
+        <div class="item">
+            <img src="images/anhmay.png">
+            <h3>Máy khắc Laze</h3>
+            <button class="xemthongtin"
+                data-ten="Máy Khắc Laze"
+                data-congxuat="15kw"
+                data-xuatxu="Đức"
+                data-baohanh="Trọn Đời">
+                Xem Thông Tin
+            </button>
+        </div>
+
+        <div class="item">
+            <img src="images/anhmay.png">
+            <h3>Máy cắt kim loại</h3>
+            <button class="xemthongtin"
+                data-ten="Máy Cắt Kim Loại"
+                data-congxuat="20kw"
+                data-xuatxu="Mỹ"
+                data-baohanh="5 năm">
+                Xem Thông Tin
+            </button>
+        </div>
+
+        <div class="item">
+            <img src="images/anhmay.png">
+            <h3>Máy in 3D</h3>
+            <button class="xemthongtin"
+                data-ten="Máy In 3D"
+                data-congxuat="5kw"
+                data-xuatxu="Trung Quốc"
+                data-baohanh="7 năm">
+                Xem Thông Tin
+            </button>
+        </div>
+
+        <div id="imageModal" class="modal">
+            <div class="modal-content image-viewer">
+
+                <span class="prev">&#10094;</span>
+
+                <img id="mainImage" class="main-image">
+
+                <span class="next">&#10095;</span>
+
+                <div id="thumbnails" class="thumbnails"></div>
+
+                <button class="cancel2-btn">Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    <!--modal tab thông tin sản phẩm-->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3 id="tenmay"></h3>
+
+            <table border="1">
+                <tr><td id="congsuat"></td></tr>
+                <tr><td id="xuatxu"></td></tr>
+                <tr><td id="baohanh"></td></tr>
+            </table>
+
+            <button class="cancel1-btn">Cancel</button>
+        </div>
+    </div>
+
+    <!--Liên kết js-->
+    <script src="script.js"></script>
+
+    <!-- GOOGLE MAP -->
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10537.878765668069!2d105.74673132488122!3d20.964448368003474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313452efff394ce3%3A0x391a39d4325be464!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBQaGVuaWthYQ!5e0!3m2!1svi!2s!4v1772277901564!5m2!1svi!2s"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <!--HEADER CHÂN TRANG -->
+    <footer class="footer">
+    <div class="footer-container">
+
+        <!-- CỘT 1 -->
+        <div class="footer-col">
+            <h3>KHO MÁY HẢI PHÒNG</h3>
+
+            <p><strong>Chi Nhánh Hà Nội:</strong> Hoàng Mai, Hà Nội</p>
+            <p><strong>Chi Nhánh Hồ Chí Minh:</strong> Quận 1</p>
+        </div>
+
+        <!-- CỘT 2 -->
+        <div class="footer-col">
+            <h3>THÔNG TIN KHO MÁY</h3>
+
+            <ul>
+                <li>Tác giả: Vũ Thế Bang</li>
+                <li>
+                    <a href="dieu-khoan.html" target="_blank">
+                        Điều khoản
+                    </a>
+                </li>
+                <li>
+                    <a href="chinh-sach-bao-hanh.html" target="_blank">
+                        Chính sách bảo hành
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- CỘT 3 -->
+        <div class="footer-col">
+            <h3>LIÊN HỆ</h3>
+
+            <p><strong>📞Hotline:</strong> <span class="hotline"></span>
+                <a href="tel:1234567890" class="hotline">1234567890</a>
+            </p>
+
+            <p>✉️Email: 
+                <a href="mailto:khomaycongnghiep@gmail.com" target="_blank">
+                    khomaycongnghiep@gmail.com
+                </a>
+            </p>
+            <p>👍Facebook:
+                <a href="https://www.facebook.com/vuthebang2405" target="_blank">
+                    Vũ Thế Bang
+                </a>
+            </p>
+            <p class="zalo">💬Zalo:
+                <a href="https://zalo.me/0900000000" target="_blank">
+                    Zalo
+                </a>
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
